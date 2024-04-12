@@ -43,8 +43,13 @@ const app = express();
 const multer = require(multer);
 app.use(multer().none());
 
-app.get('/', (req, res) => res.send('Hello World!'));
-app.listen(3000, () => console.log('Server ready'));
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+});
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+  console.log('Server ready and running on ${PORT}');
+});
 ```
 
 ## Node gitignore link
