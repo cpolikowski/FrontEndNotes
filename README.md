@@ -25,7 +25,7 @@ async function statusCheck(res)
 }
 ```
 
-## Posting through JS/ AJAX
+## Posting through JS/AJAX
 
 ```javascript
 id("input-form").addEventListener("submit", function(e){
@@ -34,21 +34,17 @@ id("input-form").addEventListener("submit", function(e){
 });
 ```
 
-## ExpressJS example
-
+## ExpressJS/multer example
+- remember to run **npm install multer**
 ``` javascript
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => res.send('Hello World!'));
-app.listen(3000, () => console.log('Server ready'));
-```
-
-## Multer example
-- remember to run **npm install multer**
-```javascript
 const multer = require(multer);
 app.use(multer().none());
+
+app.get('/', (req, res) => res.send('Hello World!'));
+app.listen(3000, () => console.log('Server ready'));
 ```
 
 ## Node gitignore link
